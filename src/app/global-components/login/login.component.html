@@ -1,0 +1,30 @@
+<div class="login-full">
+  <div class="login-overlay" (click)="closeLoginPopup()"></div>
+  <div class="login-popup">
+    <div class="login-head" (click)="closeLoginPopup()">
+      <span>X</span>
+    </div>
+    <div class="login-title">כניסה לחשבונך</div>
+    <form  (ngSubmit)="login()" ngNativeValidate>
+      <input
+        type="text"
+        required
+        name="UserName"
+        placeholder="קוד משתמש"
+        [(ngModel)]="userlogin.UserName"
+
+      />
+      <input
+        type="password"
+        required
+        placeholder="סיסמה"
+        name="passwordHash"
+        [(ngModel)]="userlogin.passwordHash"
+
+      />
+      {{errorlogin}}
+      <input type="submit" value="כניסה" />
+    </form>
+    <div class="signup" routerLink="/signup">אין לך משתמש לחץ כאן</div>
+  </div>
+</div>

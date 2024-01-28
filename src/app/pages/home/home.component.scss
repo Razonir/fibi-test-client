@@ -1,0 +1,129 @@
+.home-page {
+    .hero {
+        background-image: url("/assets/backgrounds/banner-hero.jpg");
+        background-position: center;
+        background-size: cover;
+        min-height: 80vh;
+
+        .hero-content {
+            min-height: 80vh;
+            width: 1000px;
+            max-width: 90%;
+            margin: 0 auto;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .slogan {
+                width: 50%;
+                h2 { 
+                    font-size: 60px;
+                    filter: drop-shadow( 0 0 300px black);
+                    animation: fadein 1s forwards;
+
+
+                }
+
+                p {
+                    filter: drop-shadow( 0 0 300px black);
+                    animation: fadein 1.5s forwards;
+
+                    font-size: 25px;
+
+                }
+            }
+
+            .buttons {
+                margin-right: auto;
+                background-image: linear-gradient(31deg, #001f5b 0%, #2240a3 100%);
+                display: flex;
+                flex-direction: column;
+                box-shadow: 0 0 50px rgba(0, 0, 0, 0.418);
+                animation: fadeup 1s forwards;
+
+                hr{
+                    width: 80%;
+                    margin: 0 auto;
+                    background-color: white;
+                }
+                .button {
+                    padding: 15px 20px 15px 60px;
+                    position: relative;
+                    cursor: pointer;
+                    text-decoration: none;
+                    &::after {
+                        content: url("/assets/gui/arrow.svg");
+                        display: inline-block;
+                        margin-top: 2px;
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: 20px;
+                    }
+                    &:hover{
+                        background-color: rgba(255, 255, 255, 0.089);
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 764px) {
+    .home-page {
+        .hero {
+            .hero-content {
+                flex-direction: column;
+                min-height: 50vh;
+
+                gap: 30px;
+                .slogan{
+                    width: 100%;
+                    text-align: center;
+                    h2{
+                        font-size: 40px;
+                    }
+                    p{
+                        font-size: 20px;
+                    }
+                }
+                .buttons {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+
+@keyframes fadein{
+    0%{
+        opacity: 0;
+        scale: 0.9;
+    }
+    100%{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes fadeup{
+    0%{
+        opacity: 0;
+        transform: translateY(
+            
+        50px);
+        scale: 0.9;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+
+        scale: 1;
+    }
+}
+

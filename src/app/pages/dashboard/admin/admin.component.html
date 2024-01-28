@@ -1,0 +1,24 @@
+<app-dashboard-header />
+<div class="admin-full" *ngIf="allow">
+  <div class="card">
+    <h1>רשימת משתמשים</h1>
+    <hr />
+    <table>
+      <tr>
+        <th></th>
+        <th>קוד משתמש</th>
+        <th>תפקיד</th>
+        <th>דואר אלקטרוני</th>
+        <th>מספר נייד</th>
+      </tr>
+      <tr *ngFor="let user of allUsers">
+        <td (click)="remove(user.Id)"><img src="/assets/gui/remove.png" /></td>
+        <td>{{ user.UserName }}</td>
+        <td>{{ user.Role }}</td>
+        <td>{{ user.Email }}</td>
+        <td>{{ user.Phone }}</td>
+ 
+      </tr>
+    </table>
+  </div>
+</div>

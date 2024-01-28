@@ -1,0 +1,23 @@
+<app-header/>
+<div class="home-page">
+  <div class="hero">
+    <div class="hero-content">
+      <div class="slogan">
+        <h2>מערכת לעדכון לקוחות</h2>
+        <p>
+          הבינלאומי מזמין אותכם להירשם
+          <br />
+          ולהנות מהמערכת החדשה
+        </p>
+      </div>
+      <div class="buttons">
+        <div class="button" (click)="showLoginPopup()">כניסה לחשבונך</div>
+        <hr/>
+        <div class="button" routerLink="/signup">פתיחת חשבון בבינלאומי </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer/>
+
+<app-login *ngIf="isLoginVisible" (hideLogin)="hideLoginPopup()"></app-login>

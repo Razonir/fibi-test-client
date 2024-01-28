@@ -1,0 +1,18 @@
+<header>
+    <div class="top-header">
+        <img  routerLink="/" class="logo" src="/assets/gui/logo-header.png" alt="logo-fibi">
+        <ul>
+            <li><a href="tel:+972547633596"><img src="/assets/gui/contact-us.svg" />צור קשר</a></li>
+        </ul>
+    </div>
+    <div class="menu-header">
+        <ul>
+            <li routerLink="/dashboard">מסך ראשי</li>
+            <li routerLink="/dashboard/user">עריכת משתמש</li>
+            <li routerLink="/dashboard/admin" *ngIf="allow">ממשק ניהול</li>
+        </ul>
+    </div>
+</header>
+
+
+

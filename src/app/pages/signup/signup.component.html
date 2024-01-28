@@ -1,0 +1,62 @@
+<div class="signup-full">
+  <div class="slogan">
+    <div class="header">
+      <img routerLink="/" class="logo" src="/assets/gui/logo.svg" alt="logo-fibi" />
+    </div>
+    <h2 class="content">
+      <img class="content-logo" src="/assets/gui/user.svg" alt="logo-fibi" />
+
+      פתיחת חשבון קצרה
+    </h2>
+  </div>
+  <div class="signup-from">
+    <form (ngSubmit)="signup()" ngNativeValidate>
+      <h2 class="content">פתיחת חשבון קצרה</h2>
+
+      <input
+        type="text"
+        required
+        name="UserName"
+        placeholder="קוד משתמש"
+        [(ngModel)]="user.UserName"
+      />
+      <input
+        type="password"
+        required
+        placeholder="סיסמה"
+        name="passwordHash"
+        [(ngModel)]="user.passwordHash"
+      />
+      <input
+        type="text"
+        required
+        placeholder="שם פרטי"
+        name="FirstName"
+        [(ngModel)]="user.FirstName"
+      />
+      <input
+        type="text"
+        required
+        placeholder="שם משפחה"
+        name="LastName"
+        [(ngModel)]="user.LastName"
+      />
+      <input
+        type="Email"
+        required
+        placeholder="דואר אלקטרוני"
+        name="Email"
+        [(ngModel)]="user.Email"
+      />
+      <input
+        type="text"
+        required
+        placeholder="מספר נייד"
+        name="Phone"
+        [(ngModel)]="user.Phone"
+      />
+      <div class="error">{{ errorSignup }}</div>
+      <input type="submit" value="הרשמה מהירה" />
+    </form>
+  </div>
+</div>

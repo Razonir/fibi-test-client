@@ -1,0 +1,55 @@
+.admin-full {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #18285f;
+
+    .card {
+        margin: 40px 0;
+        width: 90%;
+        padding: 20px;
+        height: 300px;
+        background-color: white;
+        border-radius: 20px;
+        overflow: auto;
+        max-width: 80%;
+        h1 {
+            color: #18285f;
+        }
+        hr{
+            margin-bottom: 40px;
+        }
+        table {
+            overflow: auto;
+            width: 95%;
+            text-align: right;
+
+            tr {
+                border-bottom: 1px solid #18285f;
+
+                td {
+
+                    img {
+                        filter: grayscale(1);
+                        cursor: pointer;
+                        width: 20px;
+                        transition: 0.2s;
+
+                    }
+
+                }
+
+                &:hover {
+                    td {
+                        color: #18285f;
+                        img {
+                            filter: grayscale(0);
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}

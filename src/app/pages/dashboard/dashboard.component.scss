@@ -1,0 +1,76 @@
+.dashbaord-full {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    text-align: center;
+    padding: 100px;
+    flex-direction: column;
+    animation: fadeup 1s forwards;
+
+    .hello {
+        font-weight: 800;
+
+    }
+
+    .wellcome {
+        font-size: 0.7em;
+        margin-top: 50px;
+
+    }
+
+    .edit {
+        border: none;
+        padding: 10px 30px;
+        border-radius: 0;
+        text-decoration: none;
+        font-size: 30px;
+        font-weight: 400;
+        margin-top: 10px;
+        background: #ffc10e;
+        color: rgba(0, 31, 91, 1);
+        cursor: pointer;
+        transition: 0.3s;
+        animation: fadeup 1s forwards;
+
+        &:hover {
+            background: #ffd75f;
+
+        }
+    }
+}
+
+
+@media screen and (max-width:764px) {
+    .dashbaord-full {
+        padding:  50px 10px;
+        font-size: 25px;
+        .hello {}
+
+        .wellcome {
+            margin-top: 10px;
+
+        }
+
+        .edit {
+            font-size: 17px;
+            padding: 7px 20px;
+        }
+    }
+
+}
+
+@keyframes fadeup {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+        scale: 0.9;
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+
+        scale: 1;
+    }
+}

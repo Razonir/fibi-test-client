@@ -1,0 +1,8 @@
+<app-dashboard-header />
+<div class="dashbaord-full"  *ngIf="userData">
+  <div class="hello">שלום {{ userData.FirstName }}!</div>
+  <div class="wellcome">
+    ברוכים הבאים למערכת ניהול המשתמשים של הבנק הבינלאומי<br />לעריכת המשתמש שלך
+  </div>
+  <div class="edit" routerLink="/dashboard/user">לחץ כאן</div>
+</div>

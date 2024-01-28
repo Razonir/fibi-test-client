@@ -1,0 +1,52 @@
+<app-dashboard-header />
+<div class="user-full" *ngIf="!loading">
+  <div class="slogan">
+    <h2 class="content">
+      <img class="content-logo" src="/assets/gui/user.svg" alt="logo-fibi" />
+      עדכון משתמש מהיר
+    </h2>
+  </div>
+  <div class="signup-from" >
+    <form (ngSubmit)="update()" ngNativeValidate>
+      <h2 class="content">עדכון משתמש מהיר</h2>
+      <span> קוד משתמש: {{ user.UserName }} </span>
+      <input
+        type="password"
+        required
+        placeholder="סיסמה"
+        name="passwordHash"
+        [(ngModel)]="user.passwordHash"
+      />
+      <input
+        type="text"
+        required
+        placeholder="שם פרטי"
+        name="FirstName"
+        [(ngModel)]="user.FirstName"
+      />
+      <input
+        type="text"
+        required
+        placeholder="שם משפחה"
+        name="LastName"
+        [(ngModel)]="user.LastName"
+      />
+      <input
+        type="Email"
+        required
+        placeholder="דואר אלקטרוני"
+        name="Email"
+        [(ngModel)]="user.Email"
+      />
+      <input
+        type="text"
+        required
+        placeholder="מספר נייד"
+        name="Phone"
+        [(ngModel)]="user.Phone"
+      />
+      <div class="error">{{ errorUpdate }}</div>
+      <input type="submit" value="עדכון משתמש" />
+    </form>
+  </div>
+</div>

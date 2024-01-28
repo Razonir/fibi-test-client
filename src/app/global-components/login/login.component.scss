@@ -1,0 +1,105 @@
+.login-full {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    transition: 0.5s;
+    color: white;
+
+    .login-overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        cursor: pointer;
+    
+    }
+    .login-popup {
+        animation: fadein 0.5s forwards;
+        padding: 35px 10px;
+        background-color: #18285f;
+        max-width: 100%;
+        width: 250px;
+        position: relative;
+        z-index: 9999;
+        .login-head {
+            cursor: pointer;
+            background-color: #011240;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            text-align: left;
+            span {
+                padding: 0 20px;
+                font-size: 20px;
+            }
+        }
+
+        form {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+
+            input {
+                color: white;
+                background-color: transparent !important;
+                border: none;
+                padding: 10px 3px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.356);
+                transition: 0.2s;
+
+                &:focus {
+                    outline: none;
+                    border-bottom: 1px solid #ffc619;
+                }
+
+                &::placeholder {}
+            }
+
+            input[type="submit"] {
+                border: none;
+                padding: 5px;
+                margin-top: 50px;
+                font-size: 20px;
+                font-weight: 600;
+                background-image: linear-gradient(90deg, #ffc619 0%, #ffeaaa 100%);
+                color: rgba(0, 31, 91, 1);
+                cursor: pointer;
+            }
+        }
+
+        .signup {
+            text-align: center;
+            margin: 20px 0 30px 0;
+        }
+    }
+}
+
+
+@keyframes fadein {
+    0% {
+
+        opacity: 0;
+        scale: 0.0;
+    }
+
+    100% {
+
+        opacity: 1;
+        scale: 1;
+    }
+}
